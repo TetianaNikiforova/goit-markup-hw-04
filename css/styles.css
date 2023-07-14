@@ -108,15 +108,21 @@ ul {
 }
 
 
-.menu a:active{
+.header-nav-list:active{
     color: #404BBF;
 }
 
-.header-nav-list{
-    position: relative;
+.nav-list-one {
+    color: #404bbf;
+    color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list-one::after {
+.nav-list-two {
+    color: #404bbf; 
+    color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-list-one::after { 
     content: '';
     width: 100%;
     height: 4px;
@@ -452,6 +458,7 @@ ul {
     width: 100%;
     height: 100%;
     background-color: var(--blue-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icons-list:hover,
@@ -464,7 +471,7 @@ ul {
     width: 264px;
     border-radius: 0px 0px 4px 4px;
     background: var(--white, #FFF);
-    padding: 32px 16px;
+    padding: 32px 0;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
@@ -552,6 +559,7 @@ ul{
     justify-content: center;
     align-items: center;
     color: var(--c-grey);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .costumers-link:hover {
@@ -647,6 +655,7 @@ ul{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--white-color);
+    margin-bottom: 16px;
 }
 
 .footer-icon {
@@ -662,6 +671,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon-link:hover,
@@ -700,6 +710,11 @@ ul{
     list-style: none;
     padding: 12px 24px;
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-foto-link {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list li button:active{
@@ -779,19 +794,23 @@ ul{
     position: absolute;
     height: 300px;
     padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 40px 32px;
     top: 0;
     left: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: -0.013em;
+    letter-spacing: 0.02em;
     color: var(--c-cloud);
     background-color: #4D5AE5;
-    transform: translateY(150%);
+    transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-hover-conteiner {
+    overflow: hidden;
+    position: relative;
 }
 
 .portfolio-foto:hover .portfolio-hover-text {
